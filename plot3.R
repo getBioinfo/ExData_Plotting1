@@ -37,6 +37,10 @@ lines(dt, myData$Sub_metering_2, col="red")
 lines(dt, myData$Sub_metering_3, col="blue")
 # add X axis by day
 axis.POSIXct(1, at=seq(xr[1], xr[2], by="day"), format="%a")
+# add legend
+legend('topright', c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), 
+       lty=c(1,1,1),
+       lwd=c(2,2,2),col=c("black","red","blue"))
 
 # close graphing device
 dev.off()
